@@ -13,6 +13,7 @@ function fetchDataFromServer() {
   });
 }
 
+
 // An async function that calls the Promise-based function
 async function fetchData() {
   try {
@@ -25,4 +26,4 @@ async function fetchData() {
 }
 
 // Call the async function
-fetchData();
+ fetchData();

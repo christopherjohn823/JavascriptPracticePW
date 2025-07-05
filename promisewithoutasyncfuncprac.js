@@ -22,19 +22,44 @@
 //         console.log(error); // Output: Failed to deliver package.
 //     });
 
-    // when you don't put catch
-    const deliverPackage = () => {
+//     // when you don't put catch
+//     const deliverPackage = () => {
+//     return new Promise((resolve, reject) => {
+//         console.log("Package is on its way...");
+//         setTimeout(() => {
+//             const delivered = true; // Simulate delivery status
+//             if (delivered) {
+//                 resolve("Package delivered successfully!");
+//             } else {
+//                 reject("Failed to deliver package.");
+//             }
+//         }, 3000); // Simulates a 3-second delay
+//         console.log("Package is in wait...");
+//     });
+// };
+
+// // Using the promise
+// deliverPackage()
+//     .then((message) => {
+//         console.log(message); // Output: Package delivered successfully!
+//     })
+//     .catch((error) => {
+//         console.log(error); // Output: Failed to deliver package.
+//     });
+
+    // if delivered is put as 'false' and you remove the 'reject' section and the 'catch' section- interview question
+    // in this case there will be no error thrown on the terminal because the catch section is not there to capture both 
+    // resolve and reject cases of 'promise'
+     const deliverPackage = () => {
     return new Promise((resolve, reject) => {
         console.log("Package is on its way...");
         setTimeout(() => {
             const delivered = false; // Simulate delivery status
             if (delivered) {
                 resolve("Package delivered successfully!");
-            } else {
-                reject("Failed to deliver package.");
-            }
+            } 
         }, 3000); // Simulates a 3-second delay
-        console.log("Package is wait...");
+        console.log("Package is in wait...");
     });
 };
 
@@ -43,6 +68,3 @@ deliverPackage()
     .then((message) => {
         console.log(message); // Output: Package delivered successfully!
     });
-    // .catch((error) => {
-    //     console.log(error); // Output: Failed to deliver package.
-    // });
