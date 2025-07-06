@@ -18,3 +18,34 @@ function showName() {
 
 showName();
 
+
+// the above can be fixed using .then
+
+// function fetchName() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => resolve("Sidharth"), 5000);
+//     });
+// }
+
+// function showName() {
+//     fetchName().then(name => {
+//     console.log("Name is:", name);
+// });
+// }
+
+// showName();
+
+// another fix is using async/await
+
+// function fetchName() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => resolve("Sidharth"), 5000);
+//     });
+// }
+
+// async function showName(){
+//    const name = await fetchName();
+//    console.log("Name is:", name); 
+// }
+
+// showName();
